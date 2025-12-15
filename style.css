@@ -57,7 +57,7 @@
             justify-content: top;
             align-items: center;
             min-height: 100vh;
-            background-image: url(/images/Background.png) ;
+            background-image: url("https://kirazhaba.github.io/flowers-first/images/Background.png") ;
         }
 
 .aboutus-section{
