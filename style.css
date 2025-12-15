@@ -57,7 +57,7 @@
             justify-content: top;
             align-items: center;
             min-height: 100vh;
-            background-image: url(file:///Users/kirakrivonogova/Desktop/new_repo/images/Background.png) ;
+            background-image: url(/images/Background.png) ;
         }
 
 .aboutus-section{
