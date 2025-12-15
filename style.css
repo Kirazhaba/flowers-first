@@ -57,7 +57,7 @@
             justify-content: top;
             align-items: center;
             min-height: 100vh;
-            background-image: url("https://kirazhaba.github.io/flowers-first/images/Background.png") ;
+            background-image: url(https://kirazhaba.github.io/flowers-first/images/Background.png) ;
         }
 
 .aboutus-section{
@@ -78,7 +78,7 @@
 
 .title{
             padding: 40px 40px 400px 40px;
-            background-image: url(file:///Users/kirakrivonogova/Desktop/new_repo/images/aboutus.png) ;
+            background-image: url(https://kirazhaba.github.io/flowers-first/images/aboutus.png) ;
         }
 .gallery-section {
             padding: 80px 40px 40px 40px;
