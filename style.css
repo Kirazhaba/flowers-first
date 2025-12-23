@@ -78,7 +78,8 @@
 
 .title{
             padding: 40px 40px 400px 40px;
-            background-image: url(https://kirazhaba.github.io/flowers-first/images/aboutus.png) ;
+            background-image: url("https://kirazhaba.github.io/flowers-first/images/aboutus.png") ;
+        
         }
 .gallery-section {
             padding: 80px 40px 40px 40px;
@@ -125,21 +126,85 @@
             cursor: default;
         }
 
+.gallery-item {
+  position: relative;      /* чтобы тултип позиционировался внутри */
+  display: inline-block;
+}
+
+.tooltip-overlay {
+  position: absolute;
+  inset: 0;                          /* растягиваем по всей карточке */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 0;                  /* можно 8px, если хочешь скруглить */
+  opacity: 0;
+  pointer-events: none;              /* не мешает клику по картинке */
+  transition: opacity 0.3s ease;
+}
+
+/* Показываем подсказку при ховере на карточке */
+.gallery-item:hover .tooltip-overlay {
+  opacity: 1;
+}
+
 .contacts-section {
-            padding: 80px 40px 60px 40px;
-            display: grid;
-            
-            gap: 40px;
-            background-color: #ffffff;
-        }
+      padding: 80px 40px 60px 40px;
+      display: grid;
+      gap: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
- .mycontacts{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            color: #000000;
+.mycontacts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      color: inherit;
+    }
 
-        }
+.theme-toggle-btn {
+      justify-self: start;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #000000;
+      background-color: #ffffff;
+      color: #000000;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Тёмная тема для блока contacts-section */
+    .contacts-section.dark {
+      background-color: #ff66b2;
+      color: #ffffff;
+    }
+
+    .contacts-section.dark .theme-toggle-btn {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .contacts-section.dark h2 {
+      color: #ffffff;
+    }
+    .contacts-section.dark p {
+      color: #ffffff;
+    }
+
+    /* Инвертируем изображения в тёмной теме */
+    .contacts-section.dark .gallery-image {
+      filter: invert(1);
+    }
 
 .form-section{
             padding: 80px 40px 40px 40px;
