@@ -6,8 +6,22 @@ let currentRating = 0;
 let allReviews = [];
 let currentFilter = 'all';
 
-// Heart rating system functions
 
+const contactsSection = document.getElementById('contacts-section');
+    const toggleBtn = document.getElementById('themeToggle');
+
+    toggleBtn.addEventListener('click', () => {
+      contactsSection.classList.toggle('dark');
+      // Меняем текст на кнопке
+      if (contactsSection.classList.contains('dark')) {
+        toggleBtn.textContent = 'Light';
+      } else {
+        toggleBtn.textContent = 'Dark';
+      }
+    });
+
+
+// Heart rating system functions
 // Initialize heart rating
 function initHeartRating() {
     const hearts = document.querySelectorAll('.heart');
